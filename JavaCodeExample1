@@ -1,10 +1,10 @@
-Program to find the largest number using ternary operator and check whether the number is even or odd
+//Program to find the largest number using ternary operator and check whether the number is even or odd
 
-public class JavaExercises{
+public class JavaExercise{
 
 public static void main(String[] args) {
 		
-		int num1, num2, num3, temp, result;
+		int num1, num2, num3;
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter a first number");
@@ -18,13 +18,24 @@ public static void main(String[] args) {
 		
 		input.close();
 		
-		temp = num1 > num2? num1 : num2;
-		result = temp > num3? temp : num3;
+		Welcome ob = new Welcome();
+		int evenOdd = ob.largestNumber(num1, num2, num3);
 		
-		if(result%2 == 0) {
-		System.out.println(result + " is even and the largest number!");
+		if(evenOdd%2 == 0) {
+		
+		System.out.println(evenOdd + " is even and the largest number!");
+		
 		}else {
-			System.out.println(result + " is odd and the largest number!");
+			System.out.println(evenOdd + " is odd and the largest number!");
 		}
 	}
+	
+	static int largestNumber(int num1, int num2, int num3){
+	int temp = num1 > num2? num1 : num2;
+	int result = temp > num3? temp : num3;
+	evenOdd();
+	
+	return result;
+	 }
+	 
   }
